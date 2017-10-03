@@ -71,5 +71,5 @@ end)
 table.insert(relics, {
 	itemstring = "relics:repair_paste 32",
 	ceil = 0,
-	floor = -50
+	floor = -1000
 })

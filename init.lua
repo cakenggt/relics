@@ -42,6 +42,7 @@ minetest.register_node("relics:relic_ore", {
 	groups = {cracky = 2}
 })
 
+-- twice as common between 0 and -1000 as -1000 and below
 minetest.register_ore({
 	ore_type = "scatter",
 	ore = "relics:relic_ore",
@@ -50,4 +51,15 @@ minetest.register_ore({
 	clust_num_ores = 1,
 	clust_size = 1,
 	y_max = 0
+})
+
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "relics:relic_ore",
+	wherein = "default:stone",
+	clust_scarcity = 21 * 21 * 21,
+	clust_num_ores = 1,
+	clust_size = 1,
+	y_max = 0,
+	y_min = -1000
 })

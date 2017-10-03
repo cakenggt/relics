@@ -42,6 +42,6 @@ end
 
 table.insert(relics, {
 	itemstring = "relics:flakey_pick_0",
-	ceil = 0,
-	floor = -50
+	ceil = -500,
+	floor = -1000
 })

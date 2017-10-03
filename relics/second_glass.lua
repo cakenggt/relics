@@ -83,6 +83,6 @@ minetest.register_node("relics:second_glass_b", {
 
 table.insert(relics, {
 	itemstring = "relics:second_glass",
-	ceil = -1000,
-	floor = -2000
+	ceil = -2000,
+	floor = -3000
 })

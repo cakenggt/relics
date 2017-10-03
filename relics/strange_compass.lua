@@ -40,6 +40,6 @@ minetest.register_tool("relics:strange_compass", {
 
 table.insert(relics, {
 	itemstring = "relics:strange_compass",
-	ceil = -1000,
+	ceil = -500,
 	floor = -2000
 })

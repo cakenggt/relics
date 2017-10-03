@@ -83,6 +83,6 @@ minetest.register_node("relics:phased_node", {
 
 table.insert(relics, {
 	itemstring = "relics:portable_hole",
-	ceil = 0,
-	floor = -50
+	ceil = -1000,
+	floor = -2000
 })
