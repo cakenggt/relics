@@ -8,7 +8,8 @@ relicfiles = {
 	"universal_solvent",
 	"strange_compass",
 	"second_glass",
-	"repair_paste"
+	"repair_paste",
+	"flakey_pick"
 }
 
 for i, relic in ipairs(relicfiles) do

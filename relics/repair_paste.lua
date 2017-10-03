@@ -31,7 +31,7 @@ function validate_repair(old_craft_grid)
 	end
 	if paste ~= nil and tool ~= nil then
 		local result = ItemStack({name=tool:get_name(), count=1})
-		local new_wear = result:get_wear() - repair_amount
+		local new_wear = tool:get_wear() - repair_amount
 		if (new_wear > 0) then
 			result:set_wear(new_wear)
 		end
