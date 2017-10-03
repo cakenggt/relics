@@ -3,7 +3,8 @@ local repair_amount = 65535/3
 minetest.register_craftitem("relics:repair_paste", {
 	description = "Repair Paste",
 	inventory_image = "relics_repair_paste.png",
-	wield_image = "relics_repair_paste.png"
+	wield_image = "relics_repair_paste.png",
+	on_use = minetest.item_eat(3)
 })
 
 function validate_repair(old_craft_grid)
