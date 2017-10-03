@@ -1,5 +1,5 @@
 local radius = 10
-local uses = 30
+local uses = 128
 
 local names = {
 	"relics:relic_ore",
@@ -34,12 +34,12 @@ minetest.register_tool("relics:strange_compass", {
 			end
 		end
 		itemstack:add_wear(65535/uses)
-		return nil
+		return itemstack
 	end
 })
 
 table.insert(relics, {
-	name = "relics:strange_compass",
+	itemstring = "relics:strange_compass",
 	ceil = -1000,
 	floor = -2000
 })

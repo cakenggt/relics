@@ -76,12 +76,13 @@ minetest.register_node("relics:phased_node", {
 	pointable = false,
 	diggable = false,
 	buildable_to = false,
+	climbable = true,
 	drop = "",
 	groups = {not_in_creative_inventory = 1}
 })
 
 table.insert(relics, {
-	name = "relics:portable_hole",
+	itemstring = "relics:portable_hole",
 	ceil = 0,
 	floor = -50
 })

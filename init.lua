@@ -6,7 +6,9 @@ relicfiles = {
 	--"watch", -- doesn't work
 	"portable_hole",
 	"universal_solvent",
-	"strange_compass"
+	"strange_compass",
+	"second_glass",
+	"repair_paste"
 }
 
 for i, relic in ipairs(relicfiles) do
@@ -33,7 +35,7 @@ minetest.register_node("relics:relic_ore", {
 	after_dig_node = function (pos, oldnode, oldmetadata, digger)
 		local dropped = get_random_appropriate_relic(pos.y)
 		if dropped ~= nil then
-			minetest.handle_node_drops(pos, {dropped.name.." 1"}, digger)
+			minetest.handle_node_drops(pos, {dropped.itemstring}, digger)
 		end
 	end,
 	groups = {cracky = 2}

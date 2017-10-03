@@ -129,7 +129,7 @@ minetest.register_abm({
 })
 
 table.insert(relics, {
-	name = "relics:universal_solvent_container",
+	itemstring = "relics:universal_solvent_container",
 	ceil = -500,
 	floor = -1000
 })

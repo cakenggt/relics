@@ -11,7 +11,7 @@ minetest.register_craftitem("relics:watch", {
 })
 
 table.insert(relics, {
-	name = "relics:watch",
+	itemstring = "relics:watch",
 	ceil = nil,
 	floor = -50
 })
