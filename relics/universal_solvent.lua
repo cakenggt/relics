@@ -125,6 +125,8 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.transforming_liquid_add(pos)
 		minetest.remove_node(pos)
+		minetest.sound_play("default_cool_lava",
+			{pos = pos, max_hear_distance = 16, gain = 0.25})
 	end
 })
 
