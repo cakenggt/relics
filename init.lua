@@ -9,8 +9,22 @@ relicfiles = {
 	"strange_compass",
 	"second_glass",
 	"repair_paste",
-	"flakey_pick"
+	"flakey_pick",
+	"glass_heart"
 }
+
+relics_helper = {}
+
+relics_helper.particle_travel = function(start, stop, image, glow, time)
+	local direction = vector.direction(start, stop)
+	minetest.add_particle({
+		pos = start,
+		velocity = vector.divide(vector.multiply(vector.normalize(direction), vector.distance(start, stop)), time),
+		expirationtime = time,
+		texture = image,
+		glow = glow
+	})
+end
 
 for i, relic in ipairs(relicfiles) do
 	dofile(minetest.get_modpath("relics").."/relics/"..relic..".lua")
@@ -33,6 +47,7 @@ end
 minetest.register_node("relics:relic_ore", {
 	description = "Relic Ore",
 	tiles = {"default_stone.png^relics_relic_ore.png"},
+	drop = "",
 	after_dig_node = function (pos, oldnode, oldmetadata, digger)
 		local dropped = get_random_appropriate_relic(pos.y)
 		if dropped ~= nil then

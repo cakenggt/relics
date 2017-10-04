@@ -22,14 +22,7 @@ minetest.register_tool("relics:strange_compass", {
 			local node = minetest.find_node_near(user_pos, radius, {name}, true)
 			if node ~= nil then
 				local origin = vector.new(user_pos.x, user_pos.y+1.6, user_pos.z)
-				local direction = vector.direction(origin, node)
-				minetest.add_particle({
-					pos = origin,
-					velocity = vector.normalize(direction),
-					expirationtime = vector.distance(origin, node),
-					texture = "relics_strange_compass_particle.png",
-					glow = default.LIGHT_MAX
-				})
+				relics_helper.particle_travel(origin, node, "relics_strange_compass_particle.png", default.LIGHT_MAX, vector.distance(origin, node))
 				break
 			end
 		end
