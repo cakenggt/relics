@@ -10,7 +10,8 @@ relicfiles = {
 	"second_glass",
 	"repair_paste",
 	"flakey_pick",
-	"glass_heart"
+	"glass_heart",
+	"bright_lantern"
 }
 
 relics_helper = {}
@@ -24,6 +25,24 @@ relics_helper.particle_travel = function(start, stop, image, glow, time)
 		texture = image,
 		glow = glow
 	})
+end
+
+function map(func, array)
+  local new_array = {}
+  for i,v in ipairs(array) do
+    new_array[i] = func(v)
+  end
+  return new_array
+end
+
+-- allows you to define node boxes using the numbers 0-16 as the
+-- corner positions of the boxes
+relics_helper.node_box_converter = function(def)
+	if type(def) == "table" then
+		return map(relics_helper.node_box_converter, def)
+	else
+		return -0.5 + (def/16)
+	end
 end
 
 for i, relic in ipairs(relicfiles) do

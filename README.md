@@ -22,7 +22,7 @@ The Flakey Pick appears to be a weak pick at first, but as the wear on the tool 
 
 Depths: 1000 - 2000
 
-When the Glass Heart is placed on the ground, any damage that a player takes within 10 blocks will fill up the heart, up to a maximum of 100 hp. When carrying the heart, damage the player would take is taken out of the heart instead.
+When the Glass Heart is placed on the ground, any damage that a player takes within 10 blocks will fill up the heart, to a maximum of 100 hp. When carrying the heart, damage the player would take is taken out of the heart instead.
 
 ### Portable Hole
 
@@ -46,4 +46,10 @@ The Strange Compass will, when used, emit a particle which travels to the neares
 
 Depths: 3000 - ?
 
-The Universal Solvent will dissolve all nodes it comes into contact with.
+The Universal Solvent will dissolve all nodes it comes into contact with, and can only be contained inside the Universal Solvent Container. It is not to be trifled with.
+
+### Bright Lantern
+
+Depths: 1500 - 2500
+
+The Bright Lantern is an unusually bright light source capable of illuminating anything within 5 blocks.
